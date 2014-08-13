@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.witi.csv.jfx.Controller">
+   <children>
+      <HBox layoutX="51.0" layoutY="40.0" prefHeight="84.0" prefWidth="277.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="CSV-Datei:">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="inputField" editable="false" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="5.0" right="1.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="inputButton" mnemonicParsing="false" onAction="#input" text="...">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="12.0" layoutY="100.0" prefHeight="84.0" prefWidth="277.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label text="XML-Datei:">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="outputField" editable="false" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="1.0" right="1.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="outputButton" mnemonicParsing="false" onAction="#output" text="...">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="exportButton" defaultButton="true" disable="true" layoutX="59.0" layoutY="107.0" mnemonicParsing="false" onAction="#export" prefHeight="29.0" prefWidth="182.0" text="Bestellungen exportieren" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="59.0" />
+   </children>
+</AnchorPane>

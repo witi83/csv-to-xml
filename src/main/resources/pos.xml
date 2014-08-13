@@ -1,0 +1,13 @@
+<twarenkorbpos>
+    <cName>%cName%</cName>
+    <cArtNr>%cArtNr%</cArtNr>
+    <cBarcode>%cBarcode%</cBarcode>
+    <cSeriennummer>%cSeriennummer%</cSeriennummer>
+    <cEinheit>%cEinheit%</cEinheit>
+    <fPreisEinzelNetto>%fPreisEinzelNetto%</fPreisEinzelNetto>
+    <fPreis>%fPreis%</fPreis>
+    <fMwSt>%fMwSt%</fMwSt>
+    <fAnzahl>%fAnzahl%</fAnzahl>
+    <cPosTyp>%cPosTyp%</cPosTyp>
+    <fRabatt>%fRabatt%</fRabatt>
+</twarenkorbpos>
