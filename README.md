@@ -6,6 +6,7 @@ The CSV to XML converter is a small application written in Java 8, which convert
 
 ## Command line parameter
 When starting on the command line, you have to pass three parameters.
+
 1. output file
 2. input file
 3. delimiter
