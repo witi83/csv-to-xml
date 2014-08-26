@@ -10,15 +10,15 @@ import java.util.List;
 
 public final class Main {
     public static void main(String... args) throws Exception {
-        if (args.length < 2) {
+        if (args.length < 3) {
             Application.launch(App.class, args); // start GUI
             return;
         }
 
         Path output = Paths.get(args[0]);
         Path input = Paths.get(args[1]);
+        String delim = args[2];
         List<String> lines = Files.readAllLines(input);
-        CSV csv = new CSV(lines.get(0));
-        Files.write(output, csv.toXML(lines).getBytes());
+        Files.write(output, CSV.toXML(lines, delim).getBytes());
     }
 }

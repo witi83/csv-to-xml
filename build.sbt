@@ -6,7 +6,7 @@ assemblyOption in assembly ~= { _.copy(includeScala = false) }
 
 name := "CSV 2 XML"
 
-version := "0.6"
+version := "1.0"
 
 jarName in assembly := s"${name.value.replace(" ", "-").toLowerCase}-${version.value}.jar"
 

@@ -20,11 +20,13 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 
-public class Controller {
+public final class Controller {
     @FXML
-    public TextField inputField;
+    private TextField inputField;
     @FXML
-    public TextField outputField;
+    private TextField delimField;
+    @FXML
+    private TextField outputField;
     @FXML
     private Button inputButton;
     @FXML
@@ -47,7 +49,7 @@ public class Controller {
 
     public void output(ActionEvent actionEvent) {
         DirectoryChooser chooser = new DirectoryChooser();
-        chooser.setTitle("Exportordner auswählen");
+        chooser.setTitle("Ausgabepfad auswählen");
         this.directoryOptional = Optional.ofNullable(chooser.showDialog(outputButton.getScene().getWindow()));
         this.directoryOptional.ifPresent(file -> {
             exportButton.setDisable(!fileOptional.isPresent());
@@ -58,13 +60,11 @@ public class Controller {
     public void export(ActionEvent actionEvent) {
         Path output = directoryOptional.get().toPath().resolve("output.xml");
         Path input = fileOptional.get().toPath();
-
         String message;
 
         try {
             List<String> lines = Files.readAllLines(input);
-            CSV csv = new CSV(lines.get(0));
-            Files.write(output, csv.toXML(lines).getBytes());
+            Files.write(output, CSV.toXML(lines, delimField.getText()).getBytes());
             message = "Datei erfolgreich erstellt";
         } catch (Exception e) {
             message = "Datei konnte nicht erstellt werden: " + e.getMessage();

@@ -6,18 +6,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.witi.csv.jfx.Controller">
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.witi.csv.jfx.Controller">
    <children>
-      <HBox layoutX="51.0" layoutY="40.0" prefHeight="84.0" prefWidth="277.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <HBox prefHeight="84.0" prefWidth="277.0">
          <children>
-            <Label text="CSV-Datei:">
+            <Label prefHeight="19.0" prefWidth="69.0" text="CSV-Datei:">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="inputField" editable="false" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+            <TextField fx:id="inputField" editable="false" maxWidth="1.7976931348623157E308" prefHeight="29.0" prefWidth="164.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="5.0" right="1.0" />
+                  <Insets left="20.0" right="1.0" />
                </HBox.margin>
             </TextField>
             <Button fx:id="inputButton" mnemonicParsing="false" onAction="#input" text="...">
@@ -27,16 +27,30 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="12.0" layoutY="100.0" prefHeight="84.0" prefWidth="277.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+      <HBox prefHeight="84.0" prefWidth="277.0">
          <children>
-            <Label text="XML-Datei:">
+            <Label text="Trennzeichen:">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="delimField" maxWidth="1.7976931348623157E308" prefHeight="29.0" prefWidth="20.0" text=",">
+               <HBox.margin>
+                  <Insets left="2.0" right="1.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="84.0" prefWidth="277.0">
+         <children>
+            <Label text="Ausgabepfad:">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
             </Label>
             <TextField fx:id="outputField" editable="false" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="1.0" right="1.0" />
+                  <Insets left="3.0" right="1.0" />
                </HBox.margin>
             </TextField>
             <Button fx:id="outputButton" mnemonicParsing="false" onAction="#output" text="...">
@@ -46,6 +60,9 @@
             </Button>
          </children>
       </HBox>
-      <Button fx:id="exportButton" defaultButton="true" disable="true" layoutX="59.0" layoutY="107.0" mnemonicParsing="false" onAction="#export" prefHeight="29.0" prefWidth="182.0" text="Bestellungen exportieren" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="59.0" />
+      <Button fx:id="exportButton" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#export" prefHeight="29.0" prefWidth="182.0" text="Bestellungen exportieren" />
    </children>
-</AnchorPane>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
